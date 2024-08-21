@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.speechapp.MainController"
+      style="-fx-background-color: #202124; -fx-text-fill: white;">
+
+    <padding>
+        <Insets bottom="60.0" left="60.0" right="60.0" top="60.0"/>
+    </padding>
+
+    <!-- Add your image -->
+    <ImageView>
+        <image>
+            <Image url="file:///C:/Users/Abhishek Patil/OneDrive/Pictures/Saved Pictures/Screenshot%202024-04-10%20131808.png"/>
+
+        </image>
+    </ImageView>
+
+    <Label text="Add a new session."
+           style="-fx-font-size: 24px; -fx-text-fill: white;"/>
+
+    <TextField fx:id="inputField" promptText="Enter session details"
+               style="-fx-background-color: #33383b; -fx-text-fill: white; -fx-font-size: 16px; -fx-min-width: 600px; -fx-min-height: 40px;"/>
+
+    <Button text="Add a Session" fx:id="addbutton" onAction="#handleAdd"
+            style="-fx-background-color: #4b8bbe; -fx-text-fill: white; -fx-font-size: 18px; -fx-min-width: 200px; -fx-min-height: 40px;"/>
+
+    <ListView fx:id="sessionListView" style="-fx-background-color: #33383b; -fx-text-fill: white; -fx-font-size: 16px; -fx-min-width: 600px; -fx-min-height: 300px;">
+        <!-- Add animation to the ListView -->
+<!--        <animate>-->
+<!--            <Timeline>-->
+<!--                <KeyFrame keyTime="0s" values="#202124"/>-->
+<!--                <KeyFrame keyTime="1s" values="#4b8bbe"/>-->
+<!--            </Timeline>-->
+<!--        </animate>-->
+    </ListView>
+
+</VBox>
